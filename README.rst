@@ -1,3 +1,5 @@
+Clone of //bitbucket.org/biocommons/hgvs with Python 3.5 support
+
 ========================================================================================
 *hgvs* - Python library to parse, format, validate, normalize, and map sequence variants
 ========================================================================================

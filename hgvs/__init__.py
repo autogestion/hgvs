@@ -75,7 +75,7 @@ except pkg_resources.DistributionNotFound as e:
 # So, we're looking for hgvs downstream of lib as an approximation
 warnings.filterwarnings('default', '', DeprecationWarning, '.*\Wlib\W.*\Whgvs\W.*')
 
-logger.info("hgvs " + __version__ + "; released: " + str(_is_released_version))
+# logger.info("hgvs " + __version__ + "; released: " + str(_is_released_version))
 
 # <LICENSE>
 # Copyright 2013-2015 HGVS Contributors (https://bitbucket.org/biocommons/hgvs)

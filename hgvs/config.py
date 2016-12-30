@@ -91,8 +91,17 @@ def _val_xform(v):
         pass
     return v
 
+import os
+conf_ini = os.path.join('hgvs', '_data', 'defaults.ini')
+_default_config = ConfigParser()
+_default_config.read(conf_ini)
 
-_default_config = Config()
-_default_config._read_file(resource_stream(__name__, "_data/defaults.ini"))
+class GC:
+    def __init__(self, **entries):
+        self.__dict__.update(entries)
 
-global_config = copy(_default_config)
+global_config = lambda: None
+for section, values in _default_config._sections.items():
+    setattr(global_config, section, GC(**dict(values)))
+
+

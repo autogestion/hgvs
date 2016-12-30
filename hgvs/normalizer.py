@@ -39,7 +39,8 @@ class Normalizer(object):
                  cross_boundaries=hgvs.global_config.normalizer.cross_boundaries,
                  shuffle_direction=hgvs.global_config.normalizer.shuffle_direction,
                  alt_aln_method=hgvs.global_config.mapping.alt_aln_method,
-                 validate=hgvs.global_config.normalizer.validate):
+                 validate=hgvs.global_config.normalizer.validate
+                 ):
         """Initialize and configure the normalizer
 
         :param hdp: HGVS Data Provider Interface-compliant instance
